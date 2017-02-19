@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Premier League Standings</h2>
+  <p>Below are the Premier League's standings for the current day.</p>
+  <div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Team</th>
+        <th>GP</th>
+        <th>W</th>
+        <th>D</th>
+        <th>L</th>
+        <th>GF</th>
+        <th>GA</th>
+        <th>GD</th>
+        <th>PTS</th>
+      </tr>
+    </thead>
+    {{#each this.standing}}
+    <tbody>
+      <tr>
+        <td>{{position}}</td>
+        <td><img src={{crestURI}} height="25vh" width="25vw"></img>  {{teamName}}</td>
+        <td>{{playedGames}}</td>
+        <td>{{wins}}</td>
+        <td>{{draws}}</td>
+        <td>{{losses}}</td>
+        <td>{{goals}}</td>
+        <td>{{goalsAgainst}}</td>
+        <td>{{goalDifference}}</td>
+        <td>{{points}}</td>
+      </tr>
+    </tbody>
+    {{/each}}
+  </table>
+  </div>
+</div>
